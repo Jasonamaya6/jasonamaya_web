@@ -1,0 +1,540 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace, sans-serif;
+  background: #eeeeee;
+  color: black; 
+  overflow-x: hidden;
+  overflow-y: auto; 
+  scroll-behavior: smooth; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Header and Social Icons === */
+.header {
+  display: flex;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 80px; 
+}
+
+.greeting-container {
+  flex: 1;
+  filter: grayscale(100%);
+
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin-left: 1px;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.social-icons a[aria-label="LinkedIn"] {
+  color: #0e76a8; 
+}
+
+.social-icons a[aria-label="GitHub"] {
+  color: #171515; 
+}
+
+.social-icons a[aria-label="Instagram"] {
+  color: #E1306C; 
+}
+
+
+.social-icons a:hover[aria-label="LinkedIn"] {
+  color: #005983; 
+}
+
+.social-icons a:hover[aria-label="GitHub"] {
+  color: #333; 
+}
+
+.social-icons a:hover[aria-label="Instagram"] {
+  color: #C13584; 
+}
+
+
+/* === Main Content Styles === */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 1px solid #555555;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+
+.intro h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+
+.intro h2 {
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 300;
+  color: #686767;
+  white-space: nowrap;
+  border-right: 3px solid;
+  animation: typing 3s steps(12, end), blink-caret 1s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14ch;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+/* === Education Section === */
+.education-content-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.JMULogo {
+  object-fit: contain;
+  width: 350px;  
+  height: auto;  
+  margin-right: 100px; 
+}
+
+.content {
+  flex: 1;    
+  width: 65%;  
+}
+
+
+
+
+.content h2 {
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+/* Responsive for Education Section */
+@media (max-width: 768px) {
+  .education-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .JMULogo {
+    width: 100%; 
+    margin-right: 0; 
+    margin-bottom: 20px; 
+  }
+
+  .content {
+    width: 100%;  
+  }
+
+  .content h2 {
+    font-size: 1.5rem; 
+  }
+}
+
+/* === Skills Section === */
+.skills-grid {
+  display: flex;
+  flex-direction: column; 
+  gap: 50px;  
+  margin-top: 150px;
+  align-items: center;  
+}
+
+.skill-card {
+  background-color: #f9f9f9; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 100%; 
+  max-width: 300px;  
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  font-size: 2.5rem;  
+  margin-bottom: 10px;
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #413f3f;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #696969;
+}
+
+
+.tools-logos {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 10px;
+}
+
+.tool-image {
+  width: 70px; 
+  height: auto;
+}
+
+
+/* === Experience Section === */
+.experience-section {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh; 
+  transition: opacity 1s ease-out, transform 1s ease-out; 
+}
+
+.experience-section h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.tab-button.active {
+  background-color: #5a9cf8;
+  color: #ffffff;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;  
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #413f3f;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.timeline-item.left {
+  left: -8px;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 51%;
+}
+
+.timeline-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.timeline-content h3 {
+  font-size: 1rem;
+  margin: 0 0 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #0b0202;
+  text-align: center;
+  width: 100%;
+}
+
+.timeline-content span {
+  font-size: 1rem;
+  color: #353944;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+
+
+/* === Projects Section === */
+.projects-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.projects-section h1 {
+  margin-bottom: 45px;
+  margin-top: 55px;
+  font-size: 2rem;
+  color: #413f3f;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+  font-size: 1.25rem;
+  color: #413f3f;
+}
+
+
+
+/* === Contact Section === */
+
+.contact-section h1 {
+  margin-top: 70px;
+  font-size: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.contact-details {
+  flex: 1;
+  max-width: 900px; 
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 900px; 
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #648fbd;
+  color: #fcfcfc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* === Footer === */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: #6a6464;
+}
+
+
+
+
+/* === Navbar === */
+
+
+
+.navbar {
+  position: fixed; /* Keeps it at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #e8e8e8;
+  transition: padding 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap; 
+  width: 100%; 
+  max-width: 800px; 
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #383636;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: font-size 0.3s, padding 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #0f040450;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px 15px; /* Reduces padding on smaller screens */
+  }
+
+  .nav-links {
+    gap: 8px; /* Adjust gap for smaller screens */
+  }
+
+  .nav-links a {
+    font-size: 16px; /* Reduces font size */
+    padding: 6px 8px; /* Reduces padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 5px; /* Further reduce gap */
+  }
+
+  .nav-links a {
+    font-size: 12px; 
+    padding: 4px 6px; /* Further reduces padding */
+  }
+}
